@@ -24,7 +24,7 @@ fun.check.packages <- function(x){
       library(x[i], character.only = TRUE)
     }
 }
-packs = c('knitr', 'ggplot2', 'LSD','dplyr','tidyr','scales', 'cowplot', 'MASS', 'patchwork')
+packs = c('ggplot2', 'dplyr','tidyr', 'MASS', 'patchwork')
 fun.check.packages(packs)
 
 # Load the data for today's class
