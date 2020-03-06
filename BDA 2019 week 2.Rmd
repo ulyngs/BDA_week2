@@ -30,6 +30,9 @@ fun.check.packages(packs)
 # Load the data for today's class
 load("BDA_week2.RData")
 
+# in 'mydata', a is normally distributed, b is a power law, c is log normal, d is exponential
+#mydata
+
 ```
 
 
@@ -97,8 +100,7 @@ ggplot(data = df_ecdf,
        aes(x1, y2) ) +
   geom_line() +
   geom_point(color = "black") +
-  ggtitle('ECDF of a') +
-  labs(x = "a", y = "Cumulative probability")
+  labs(x = "a", y = "Cumulative probability", title = 'ECDF of a')
 # you can add scale_x_log10() and scale_y_log10() for power laws
 
 ```
