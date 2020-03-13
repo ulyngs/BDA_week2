@@ -284,6 +284,7 @@ ggplot(mydata, aes(d)) +
 Log-normal, exponential and power functions all look very similar when plotted on a lin-lin plot. Log-normal and Exponential functions also look very similar when plotted on a lin-log plot. But they look very different when plotted on a log-log plot or a log-lin plot. Equally, power law and log-normal functions look similar on a log-log plot but very different on a lin-log plot. This might all sound a bit confusing - run this code to see how they all compare:
 
 ```{r compare-functions}
+#a is normally distributed, b is a power law, c is log normal, d is exponential
 # make the data 'long'
 mydata.long <- tidyr::gather(mydata)
 
@@ -375,7 +376,8 @@ ggplot(df.power, aes(x, value)) +
 ## Exponents revisited (briefly)
 Often, the difference between the exponential function and a power law is ignored when we are talking everyday about rates of change. BUT! they really differ in terms of their accelaration. Exponents increase far faster than powers.
 
-This is because with a power law function the formula is: f(x) = x^b. The exponent stays constant, whilst the base increases. So if our exponent is 2 and the base ranges from 1 to 10, we get: 1, 4, 9, 16, 25, 36, 49, 64, 81, 100. With an exponential function the formula is: f(x) = b^x. The exponent increases whilst the base stays constant. So if our base is 2 and our exponent x range from 1 to 10 we get: 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024.
+This is because with a power law function the formula is: f(x) = x^b. The exponent stays constant, whilst the base increases. So if our exponent is 2 and the base ranges from 1 to 10, we get: 1, 4, 9, 16, 25, 36, 49, 64, 81, 100. 
+With an exponential function the formula is: f(x) = b^x. The exponent increases whilst the base stays constant. So if our base is 2 and our exponent x range from 1 to 10 we get: 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024.
 
 You can observe this in the plot below:
 
